@@ -1,0 +1,37 @@
+<main>
+  <div class="goal-content">
+    <h2>¡Tu objetivo ha sido agregado exitosamente!</h2>
+    <div class="goal-card">
+      <h3>Conocer mi sobrino</h3>
+      <p>Camper Heisman</p>
+      <p>Meta de ahorro: $6,000,000</p>
+      <p>Fecha de cumplimiento: Diciembre/2022</p>
+    </div>
+  </div>
+  <div class="goal-products">
+    <h2>
+      ¡Vamos por esos <span class="highlight">$6,000,000</span> para Conocer mi
+      sobrino!
+    </h2>
+    <div class="product-list">
+      @for (product of dataProduct; track product.numberProduct) {
+      <app-product-card></app-product-card>
+      <li>{{ product.balanceProduct }}</li>
+      }
+
+      <div class="product-card">
+        <h3>FIC Efectivo</h3>
+        <p>#80230098619</p>
+        <p>Ya cuentas con: $7,120,000</p>
+      </div>
+      <div class="product-card">
+        <h3>Seguro de vida CREA</h3>
+        <p>#710000986159</p>
+        <p>Tu ahorro actual: $7,120,000</p>
+      </div>
+    </div>
+  </div>
+  <div class="goal-footer">
+    <button class="btn-primary" (click)="(onSubmit)">Asociar a objetivo</button>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+@import 'styles';
+
+footer {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 1rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: 1rem;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
