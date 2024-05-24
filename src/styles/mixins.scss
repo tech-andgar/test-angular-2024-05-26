@@ -1,0 +1,11 @@
+@mixin font-primary($size: $font-size-base, $weight: $font-weight-normal) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin font-secondary($size: $font-size-base, $weight: $font-weight-normal) {
+  font-family: $font-secondary;
+  font-size: $size;
+  font-weight: $weight;
+}
