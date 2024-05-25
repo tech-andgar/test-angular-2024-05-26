@@ -1,6 +1,13 @@
 <main>
-  <div class="goal-content">
+  <div style="padding-left: 5%; padding-top: 2%; color: #fff">
+    <a href="#" style="color: #fff">
+      <img src="icons/home-skandia.svg" alt="Inicio Skandia" />
+      Ir a inicio
+    </a>
+  </div>
+  <div class="goal-content" style="background-color: aquamarine">
     <h2>¡Tu objetivo ha sido agregado exitosamente!</h2>
+    <h3>¡Te hemos enviado un correo con la notificación!</h3>
     <div class="goal-card">
       <h3>Conocer mi sobrino</h3>
       <p>Camper Heisman</p>
@@ -17,11 +24,12 @@
       @for ( product of dataProducts; track product.numberProduct; let idx =
       $index, e = $even ) {
       <app-product-card
-        [product]="product"
         class="product-card"
-        [selectedProduct]="selectedProduct"
-        (checkboxChange)="onCheckboxChange(product, $event)"
+        [product]="product"
         [class.selectedCard]="selectedProduct === product"
+        [selectedProduct]="selectedProduct"
+        (checkboxChange)="onProductSelect(product, $event)"
+        (click)="onProductSelect(product, true)"
       />
       }
     </div>

@@ -36,7 +36,8 @@ export class MainComponent {
 
   selectedProduct: Product | null = null;
 
-  onCheckboxChange(product: Product, isChecked: boolean) {
+
+  onProductSelect(product: Product, isChecked: boolean) {
     if (isChecked) {
       this.selectedProduct = product;
     } else {

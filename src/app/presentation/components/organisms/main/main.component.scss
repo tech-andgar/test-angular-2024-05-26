@@ -1,6 +1,7 @@
 @import "styles";
 
 main {
+  margin-top: 100px;
   .goal-content {
     padding: 2rem;
     text-align: center;
@@ -51,7 +52,6 @@ main {
         -webkit-box-shadow: 0px 0px 6px #00000029;
         -moz-box-shadow: 0px 0px 6px #00000029;
 
-
         border-radius: 13px 13px 13px 13px;
         -moz-border-radius: 13px 13px 13px 13px;
         -webkit-border-radius: 13px 13px 13px 13px;
@@ -90,16 +90,15 @@ main {
       font-size: 1rem;
 
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: darken(red, 10%);
+        // background-color: darken($primary-color, 10%);
       }
     }
   }
 }
 
-
-
 .selectedCard {
   box-shadow: 0 0 1px $primary-color inset, 0 0 2px $primary-color inset,
-  0 0 10px $primary-color inset, 0 0 10px $primary-color,
-  0 0 5px $primary-color !important;
+    0 0 10px $primary-color inset, 0 0 10px $primary-color,
+    0 0 5px $primary-color !important;
 }
