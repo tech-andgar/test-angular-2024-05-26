@@ -36,7 +36,6 @@ export class MainComponent {
 
   selectedProduct: Product | null = null;
 
-
   onProductSelect(product: Product, isChecked: boolean) {
     if (isChecked) {
       this.selectedProduct = product;

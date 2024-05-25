@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent, FooterComponent, MainComponent } from '@components//components';
+import {
+  HeaderComponent,
+  FooterComponent,
+  MainComponent,
+} from '@components//components';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +12,7 @@ import { HeaderComponent, FooterComponent, MainComponent } from '@components//co
   imports: [RouterOutlet, HeaderComponent, FooterComponent, MainComponent],
   // template: ``,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'test-angular-skandia';
