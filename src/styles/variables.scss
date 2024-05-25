@@ -1,23 +1,24 @@
-$background-primary-color: #FFFFFF;
-$background-secondary-color: #E2E2E2;
+$background-primary-color: light-dark(#FFFFFF, #FFFFFF) ;
+$background-secondary-color: light-dark(#E2E2E2,#E2E2E2);
 
-$line-border-color: #00000029;
+$line-border-color: light-dark(#00000029,#00000029);
 
-$primary-color: #00C83C;
-$secondary-color: #3F3F3F;
+$primary-color: light-dark(#00C83C,#00C83C);
+$secondary-color: light-dark(#3F3F3F,#00C83C);
 
-$status-card-primary-background-color: #A5D7E1;
-$status-card-secondary-background-color: #FECD72;
-$status-card-ternary-background-color: #95DBB7;
+$status-card-primary-background-color: light-dark(#A5D7E1,#A5D7E1);
+$status-card-secondary-background-color: light-dark(#FECD72,#FECD72);
+$status-card-ternary-background-color: light-dark(#95DBB7,#95DBB7);
 
-$card-text-background-color: #EDEDED;
+$card-text-background-color: light-dark(#EDEDED,#3F3F3F);
+$sub-card-text-background-color: light-dark(#3F3F3F,#3F3F3F);
 
-$status-card-primary-line-color: #A4D071;
+$status-card-primary-line-color: light-dark(#A4D071,#A4D071);
 $status-card-secondary-line-color: $status-card-primary-background-color;
-$status-card-ternary-line-color: #63AABC;
-$status-card-quaternary-line-color: #FF9460;
+$status-card-ternary-line-color: light-dark(#63AABC,#63AABC);
+$status-card-quaternary-line-color: light-dark(#FF9460,#FF9460);
 
-$h2-primary-color: #3F3F3F;
-$h2-secondary-color: #FE9200;
+$h2-primary-color: light-dark(#3F3F3F,#3F3F3F);
+$h2-secondary-color: light-dark(#FE9200,#FE9200);
 
-$card-line-color: #C4C7C4;
+$card-line-color: light-dark(#C4C7C4,#C4C7C4);
