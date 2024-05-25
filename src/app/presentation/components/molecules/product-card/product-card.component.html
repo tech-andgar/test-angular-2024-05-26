@@ -1,5 +1,22 @@
 <div class="product-card">
+  <div class="checkbox-container">
+    <input
+      type="checkbox"
+      id="{{ product.numberProduct }}"
+      [checked]="selectedProduct === product"
+      title="Sobre selección item {{ product.nameProduct }} #{{product.numberProduct}}"
+      (change)="onCheckboxChange($event)"
+    />
+  </div>
   <h3>{{ product.nameProduct }}</h3>
   <p>#{{ product.numberProduct }}</p>
-  <p>Ya cuentas con: ${{ product.balanceProduct }}</p>
+  <hr />
+  <p class="subtitle">Ya cuentas con:</p>
+  <p class="value">{{ product.balanceProduct | currencyWithUnit }}</p>
+</div>
+<div class="sub-card">
+  <img src="icons/twitter-skandia.svg" alt="" class="sub-card-icon" />
+  ¡Cuentas con {{ product.balanceProduct | currencyWithUnit }} para tu objetivo!
+  Te recomendamos aportar $388.000 mensuales para lograrlo en diciembre del
+  2022.
 </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '@app/core/domain/models/product.model';
+import { Product } from '@models/product.model';
 
 import { ProductCardComponent } from '@components/components';
 
@@ -11,7 +11,7 @@ import { ProductCardComponent } from '@components/components';
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
-  dataProduct: Product[] = [
+  dataProducts: Product[] = [
     new Product({
       nameProduct: 'FIC Efectivo',
       numberProduct: '60000986159',
@@ -33,4 +33,16 @@ export class MainComponent {
   ];
 
   onSubmit() {}
+
+  selectedProduct: Product | null = null;
+
+  onCheckboxChange(product: Product, isChecked: boolean) {
+    if (isChecked) {
+      this.selectedProduct = product;
+    } else {
+      if (this.selectedProduct === product) {
+        this.selectedProduct = null;
+      }
+    }
+  }
 }

@@ -39,6 +39,9 @@
       "@domain/*": [
         "app/core/domain/*"
       ],
+      "@models/*": [
+        "app/core/domain/models/*"
+      ],
       "@data/*": [
         "app/data/*"
       ],

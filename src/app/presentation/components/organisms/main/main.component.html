@@ -14,21 +14,16 @@
       sobrino!
     </h2>
     <div class="product-list">
-      @for (product of dataProduct; track product.numberProduct) {
-      <app-product-card></app-product-card>
-      <li>{{ product.balanceProduct }}</li>
+      @for ( product of dataProducts; track product.numberProduct; let idx =
+      $index, e = $even ) {
+      <app-product-card
+        [product]="product"
+        class="product-card"
+        [selectedProduct]="selectedProduct"
+        (checkboxChange)="onCheckboxChange(product, $event)"
+        [class.selectedCard]="selectedProduct === product"
+      />
       }
-
-      <div class="product-card">
-        <h3>FIC Efectivo</h3>
-        <p>#80230098619</p>
-        <p>Ya cuentas con: $7,120,000</p>
-      </div>
-      <div class="product-card">
-        <h3>Seguro de vida CREA</h3>
-        <p>#710000986159</p>
-        <p>Tu ahorro actual: $7,120,000</p>
-      </div>
     </div>
   </div>
   <div class="goal-footer">

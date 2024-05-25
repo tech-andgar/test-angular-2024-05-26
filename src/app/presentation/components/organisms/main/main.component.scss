@@ -20,7 +20,7 @@ main {
       max-width: 400px;
 
       h3 {
-        font-family: $font-secondary;
+        font-family: $font-family-secondary;
         color: $secondary-color;
       }
 
@@ -41,6 +41,38 @@ main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+
+      .product-card {
+        width: 30%;
+        padding: 0.5rem;
+        background-color: $background-primary-color;
+        margin-bottom: 1rem;
+        box-shadow: 0px 0px 6px #00000029;
+        -webkit-box-shadow: 0px 0px 6px #00000029;
+        -moz-box-shadow: 0px 0px 6px #00000029;
+
+
+        border-radius: 13px 13px 13px 13px;
+        -moz-border-radius: 13px 13px 13px 13px;
+        -webkit-border-radius: 13px 13px 13px 13px;
+
+        h3 {
+          font-family: $font-family-secondary;
+          color: #3f3f3f;
+        }
+
+        .subtitle {
+          font-family: $font-family-primary;
+          size: $font-size-xl;
+          color: #363636;
+          font-weight: $font-weight-bold;
+        }
+
+        .value {
+          font: normal normal medium 18px/23px $font-family-primary;
+          color: $primary-color;
+        }
+      }
     }
   }
 
@@ -54,7 +86,7 @@ main {
       padding: 1rem 2rem;
       border: none;
       cursor: pointer;
-      font-family: $font-primary;
+      font-family: $font-family-primary;
       font-size: 1rem;
 
       &:hover {
@@ -62,4 +94,12 @@ main {
       }
     }
   }
+}
+
+
+
+.selectedCard {
+  box-shadow: 0 0 1px $primary-color inset, 0 0 2px $primary-color inset,
+  0 0 10px $primary-color inset, 0 0 10px $primary-color,
+  0 0 5px $primary-color !important;
 }
