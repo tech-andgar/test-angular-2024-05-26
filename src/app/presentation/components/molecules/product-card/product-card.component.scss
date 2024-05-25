@@ -5,7 +5,11 @@
 
   h3 {
     font-family: $font-family-secondary;
-    color: #3f3f3f;
+    color: $h2-primary-color;
+  }
+
+  p {
+    color: $h2-primary-color;
   }
 
   .subtitle {
@@ -65,6 +69,7 @@
   padding: 10% 4%;
   background: #ededed 0% 0% no-repeat padding-box;
   text-align: center;
+  color: $sub-card-text-background-color;
 
   .sub-card-icon {
     position: absolute;
