@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Product } from '@domain/models/product.model';
+import { ProductEntity } from '@app/features/home/domain/entities/product.entity';
 import { CurrencyWithUnitPipe } from '@core/utils/pipe/currency/currency.pipe';
 
 @Component({
@@ -12,13 +12,13 @@ import { CurrencyWithUnitPipe } from '@core/utils/pipe/currency/currency.pipe';
 export class ProductCardComponent {
   isChecked: boolean = false;
   @Input()
-  product: Product = new Product({
-    nameProduct: '',
-    numberProduct: '',
-    balanceProduct: '',
-    detaildProduct: '',
+  product: ProductEntity = new ProductEntity({
+    name: '',
+    number: '',
+    balance: '',
+    detail: '',
   });
-  @Input() selectedProduct!: Product | null;
+  @Input() selectedProduct!: ProductEntity | null;
   @Output() checkboxChange = new EventEmitter<boolean>();
   onCheckboxChange(event: Event) {
     event.stopPropagation();

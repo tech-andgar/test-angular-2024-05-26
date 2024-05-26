@@ -1,5 +1,5 @@
-<main>
-  <div style="padding-left: 5%; padding-top: 2%; color: #fff">
+<main  style="background-color: blue">
+  <div style="padding-left: 5%;">
     <a href="#" style="color: #fff">
       <img src="icons/home-skandia.svg" alt="Inicio Skandia" />
       Ir a inicio
@@ -21,7 +21,7 @@
       sobrino!
     </h2>
     <div class="product-list">
-      @for ( product of dataProducts; track product.numberProduct; let idx =
+      @for ( product of dataProducts; track product.number; let idx =
       $index, e = $even ) {
       <app-product-card
         class="product-card"
