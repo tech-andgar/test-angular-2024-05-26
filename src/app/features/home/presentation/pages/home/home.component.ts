@@ -3,7 +3,7 @@ import {
   FooterComponent,
   HeaderComponent,
   MainComponent,
-} from '@components/components';
+} from '@presentation-home/components/components';
 
 @Component({
   selector: 'app-home',
