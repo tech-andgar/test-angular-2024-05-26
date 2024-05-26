@@ -33,26 +33,47 @@
       "@app/*": [
         "app/*"
       ],
+      "@utils/*": [
+        "app/core/utils/*"
+      ],
+      "@data-core/*": [
+        "app/core/data/*"
+      ],
+      "@domain-core/*": [
+        "app/core/domain/*"
+      ],
       "@core/*": [
         "app/core/*"
       ],
-      "@domain/*": [
-        "app/core/domain/*"
+      "@data-home/*": [
+        "app/features/home/data/*"
       ],
-      "@models/*": [
-        "app/core/domain/models/*"
+      "@datasources-home/*": [
+        "app/features/home/data/datasources/*"
       ],
-      "@data/*": [
-        "app/data/*"
+      "@repositories-data-home/*": [
+        "app/features/home/data/repositories/*"
       ],
-      "@presentation/*": [
-        "app/presentation/*"
+      "@domain-home/*": [
+        "app/features/home/domain/*"
       ],
-      "@components/*": [
-        "app/presentation/components/*"
+      "@entities-home/*": [
+        "app/features/home/domain/entities/*"
       ],
-      "@pages/*": [
-        "app/presentation/pages/*"
+      "@repositories-domain-home/*": [
+        "app/features/home/domain/repositories/*"
+      ],
+      "@usecases-home/*": [
+        "app/features/home/domain/usecases/*"
+      ],
+      "@presentation-home/*": [
+        "app/features/home/presentation/*"
+      ],
+      "@home-feature/*": [
+        "app/features/home/*"
+      ],
+      "@features/*": [
+        "app/features/*"
       ],
       "@style/*": [
         "style/*"
