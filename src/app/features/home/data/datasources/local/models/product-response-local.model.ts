@@ -1,5 +1,5 @@
 import { BaseEntity } from '@domain-core/entity/base-entity';
-import { BaseModel } from'@data-core/model/base-model';
+// import { BaseModel } from'@data-core/model/base-model';
 import { ProductLocalModel } from './product-local.model';
 
 // export class ProductResponseLocalModel extends BaseModel {

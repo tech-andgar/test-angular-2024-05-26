@@ -14,7 +14,7 @@ export abstract class ProductsRepository {
    */
   abstract associateToTarget(
     product: ProductEntity,
-    useLocal: boolean
+    useLocal: boolean,
   ): Observable<ProductEntity>;
 
   /**

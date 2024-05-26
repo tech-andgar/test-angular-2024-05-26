@@ -46,8 +46,9 @@ export class ProductLocalDataSource {
       const jsonData = JSON.parse(this._dataJson);
       const listCard = jsonData.listCard || [];
       try {
-        const products = listCard.map((item: any) =>
-          ProductLocalModel.fromJson(item)
+        const products = listCard.map(
+          (item: any) => {},
+          // ProductLocalModel.fromJson(item)
         );
 
         observer.next(products);

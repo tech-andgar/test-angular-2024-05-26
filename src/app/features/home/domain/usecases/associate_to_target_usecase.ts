@@ -1,16 +1,17 @@
-import { Either } from '@utils/either/either';
 import { ProductEntity } from '@entities-home/product.entity';
 import { Observable } from 'rxjs';
-import { ProductsService } from '../../data/services/products.service';
+import { UseCase } from '@app/core/base/use-case';
+import { ProductsRepository } from '../repositories/products-repository';
 
-export class AssociateToTargetUseCase {
-  productService: ProductsService;
+export class AssociateToTargetUseCase
+  implements UseCase<ProductEntity, ProductEntity>
+{
+  constructor(private productsRepository: ProductsRepository) {}
 
-  constructor(productService: ProductsService) {
-    this.productService = productService;
-  }
-
-  execute(product: ProductEntity,  useLocal: boolean = false): Observable<ProductEntity> {
-    return this.productService.associateToTarget(product, useLocal);
+  execute(
+    product: ProductEntity,
+    useLocal: boolean = false,
+  ): Observable<ProductEntity> {
+    return this.productsRepository.associateToTarget(product, useLocal);
   }
 }
