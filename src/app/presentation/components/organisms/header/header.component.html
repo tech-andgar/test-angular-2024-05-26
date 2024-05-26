@@ -1,4 +1,37 @@
 <header>
+  <nav id="menu" class="menu">
+    <div class="actionbar">
+      <div>
+        <button id="menuBtn" (click)="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h3 class="menuText">Dashboard</h3>
+      </div>
+    </div>
+    <ul class="optionsBar">
+      <li class="menuItem">
+        <a href="#" class="menuOption">
+          &nbsp;&nbsp;&nbsp;
+          <img src="icons/home-skandia.svg" alt="Home" />
+          <h5 class="menuText">&nbsp;&nbsp;&nbsp;&nbsp;Home</h5>
+        </a>
+      </li>
+      <li class="menuBreak"><hr /></li>
+      @for ( itemMenu of itemsMenu; track itemMenu.title; let idx = $index, e =
+      $even ) {
+      <li class="menuItem">
+        <button id="{{ idx }}" class="menuOption">
+          @if(!itemMenu.title.includes(' ')){
+            <img src="{{ itemMenu.icon }}" alt="{{ itemMenu.title }}" />
+          }@else {
+            &nbsp;&nbsp;<i class="{{ itemMenu.icon }}"></i>
+          }
+          <h5 class="menuText">{{ itemMenu.title }}</h5>
+        </button>
+      </li>
+      }
+    </ul>
+  </nav>
   <span>&nbsp;</span>
   <span>&nbsp;</span>
   <img src="icons/logo-skandia.svg" alt="Logo Skandia" class="logo" />
@@ -26,16 +59,16 @@
   <span>&nbsp;</span>
   <span>&nbsp;</span>
   <div>
-    <img src="icons/happy-2.svg" alt="Logo Skandia"/>
+    <img src="icons/happy-2.svg" alt="Logo Skandia" />
     <span>&nbsp;</span>
     <h3 class="link">Tu Financial Planner</h3>
   </div>
   <span>&nbsp;</span>
   <div>
-    <img src="icons/hand-money-skandia.svg" alt="Aportes Skandia"/>
+    <img src="icons/hand-money-skandia.svg" alt="Aportes Skandia" />
     <span>&nbsp;</span>
     <h3 class="link">Aportes</h3>
   </div>
   <span>&nbsp;</span>
-  <img src="icons/faq-orange-circle.svg" alt="Aportes Skandia"/>
+  <img src="icons/faq-orange-circle.svg" alt="Aportes Skandia" />
 </header>

@@ -1,5 +1,11 @@
 @import "styles";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -8,6 +14,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 53px;
 
   .logo {
     height: 27px;
@@ -30,9 +37,139 @@ header {
       $font-family-primary;
     color: $h2-primary-color;
   }
+
   h3.link {
     text-decoration: underline;
     font: normal normal $font-weight-bold 14px/19px $font-family-secondary;
     color: $primary-color;
   }
+}
+
+.menu {
+  position: absolute;
+  width: 60px;
+  height: 54.2vh;
+  background-color: var(--bg-black-50);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease 0.15s;
+  font-family: sans-serif;
+  background: #e2e2e2 0% 0% no-repeat padding-box;
+}
+.menu.open {
+  width: 200px;
+}
+.menu a {
+  text-decoration: none;
+}
+.menu .actionbar {
+  background-color: #fff;
+  width: 100%;
+  height: 10%;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.menu .actionbar div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+.menu .actionbar div button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--bg-black-100);
+  width: 45px;
+  height: 45px;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+.menu .actionbar div button:hover {
+  background-color: $primary-color;
+}
+.menu .actionbar div button > i {
+  color: $primary-color;
+}
+.menu .actionbar div button:hover > i:hover {
+  color: #fff;
+}
+.menu .actionbar div h3 {
+  width: calc(100% - 45px);
+  text-align: center;
+}
+.optionsBar li:nth-child(1) {
+  background-color: $primary-color;
+}
+.optionsBar li:nth-child(1) .menuText {
+  color: #fff;
+}
+.menu .optionsBar {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  height: 60%;
+  flex-direction: column;
+}
+.menu .optionsBar .menuItem {
+  height: 45px;
+}
+.menu .optionsBar .menuItem .menuOption {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+.menu .optionsBar .menuItem .menuOption:hover {
+  background-color: $primary-color;
+}
+.menu .optionsBar .menuItem .menuOption i {
+  width: 45px;
+  text-align: center;
+  color: var(--bg-black-100);
+}
+.menu .optionsBar .menuItem .menuOption h5 {
+  width: calc(100% - 45px);
+}
+.menu .optionsBar .menuItem .menuOption:hover .menuText,
+.menu .optionsBar .menuItem .menuOption:hover i,
+.menu .actionbar div button:hover i {
+  color: #fff;
+}
+
+.menuText {
+  color: $primary-color;
+  transform: translateX(-250px);
+  opacity: 0;
+  transition: transform 0.3s ease 0.1s;
+}
+.menuText.open2 {
+  opacity: 1;
+  transform: translateX(0);
+}
+.menu .menuBreak {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .menuBreak hr {
+  width: 50%;
+  height: 3px;
+  background-color: var(--bg-black-100);
+  border: none;
+  border-radius: 5px;
 }
