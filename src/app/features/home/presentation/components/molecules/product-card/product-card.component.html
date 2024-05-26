@@ -4,7 +4,7 @@
       type="checkbox"
       id="{{ product.number }}"
       [checked]="selectedProduct === product"
-      title="Sobre selección item {{ product.name }} #{{product.number}}"
+      title="Sobre selección item {{ product.name }} #{{ product.number }}"
       (change)="onCheckboxChange($event)"
     />
   </div>
@@ -16,7 +16,6 @@
 </div>
 <div class="sub-card">
   <img src="icons/twitter-skandia.svg" alt="" class="sub-card-icon" />
-  ¡Cuentas con {{ product.balance | currencyWithUnit }} para tu objetivo!
-  Te recomendamos aportar $388.000 mensuales para lograrlo en diciembre del
-  2022.
+  ¡Cuentas con {{ product.balance | currencyWithUnit }} para tu objetivo! Te
+  recomendamos aportar $388.000 mensuales para lograrlo en diciembre del 2022.
 </div>

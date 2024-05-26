@@ -17,18 +17,21 @@
         </a>
       </li>
       <li class="menuBreak"><hr /></li>
-      @for ( itemMenu of itemsMenu; track itemMenu.title; let idx = $index, e =
-      $even ) {
-      <li class="menuItem">
-        <button id="{{ idx }}" class="menuOption">
-          @if(!itemMenu.title.includes(' ')){
-            <img src="{{ itemMenu.icon }}" alt="{{ itemMenu.title }}" />
-          }@else {
-            &nbsp;&nbsp;<i class="{{ itemMenu.icon }}"></i>
-          }
-          <h5 class="menuText">{{ itemMenu.title }}</h5>
-        </button>
-      </li>
+      @for (
+        itemMenu of itemsMenu;
+        track itemMenu.title;
+        let idx = $index, e = $even
+      ) {
+        <li class="menuItem">
+          <button id="{{ idx }}" class="menuOption">
+            @if (!itemMenu.title.includes(" ")) {
+              <img src="{{ itemMenu.icon }}" alt="{{ itemMenu.title }}" />
+            } @else {
+              &nbsp;&nbsp;<i class="{{ itemMenu.icon }}"></i>
+            }
+            <h5 class="menuText">{{ itemMenu.title }}</h5>
+          </button>
+        </li>
       }
     </ul>
   </nav>

@@ -1,5 +1,5 @@
-<main  style="background-color: blue">
-  <div style="padding-left: 5%;">
+<main style="background-color: blue">
+  <div style="padding-left: 5%">
     <a href="#" style="color: #fff">
       <img src="icons/home-skandia.svg" alt="Inicio Skandia" />
       Ir a inicio
@@ -21,16 +21,19 @@
       sobrino!
     </h2>
     <div class="product-list">
-      @for ( product of dataProducts; track product.number; let idx =
-      $index, e = $even ) {
-      <app-product-card
-        class="product-card"
-        [product]="product"
-        [class.selectedCard]="selectedProduct === product"
-        [selectedProduct]="selectedProduct"
-        (checkboxChange)="onProductSelect(product, $event)"
-        (click)="onProductSelect(product, true)"
-      />
+      @for (
+        product of dataProducts;
+        track product.number;
+        let idx = $index, e = $even
+      ) {
+        <app-product-card
+          class="product-card"
+          [product]="product"
+          [class.selectedCard]="selectedProduct === product"
+          [selectedProduct]="selectedProduct"
+          (checkboxChange)="onProductSelect(product, $event)"
+          (click)="onProductSelect(product, true)"
+        />
       }
     </div>
   </div>
