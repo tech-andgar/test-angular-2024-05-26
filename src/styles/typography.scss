@@ -1,19 +1,116 @@
-// Fonts
+/**
+ * This SASS file contains the configuration for fonts, font weights, and font sizes.
+ *
+ * @fileoverview This file is responsible for defining the global font styles and sizes used throughout the application.
+ */
+
+/* Fonts */
+
+/**
+ * The primary font family used throughout the application.
+ *
+ * @type {string}
+ * @default 'Montserrat', sans-serif
+ */
 $font-family-primary: 'Montserrat', sans-serif;
+
+/**
+ * The secondary font family used as a fallback or for specific elements.
+ *
+ * @type {string}
+ * @default 'Verdana', sans-serif
+ */
 $font-family-secondary: 'Verdana', sans-serif;
 
-// Font Weight
+/* Font Weight */
+
+/**
+ * The regular font weight used for normal text.
+ *
+ * @type {number}
+ * @default 400
+ */
 $font-weight-regular: 400;
+
+/**
+ * The medium font weight used for emphasized text.
+ *
+ * @type {number}
+ * @default 500
+ */
 $font-weight-medium: 500;
+
+/**
+ * The semibold font weight used for headings and important text.
+ *
+ * @type {number}
+ * @default 600
+ */
 $font-weight-semibold: 600;
+
+/**
+ * The bold font weight used for strong emphasis.
+ *
+ * @type {number}
+ * @default 700
+ */
 $font-weight-bold: 700;
 
 
-// Font Size
+/* Font Size */
+
+/**
+ * The extra-large font size used for headings and large text.
+ *
+ * @type {number}
+ * @default 25px
+ */
 $font-size-xxl: 25px;
+
+/**
+ * The large font size used for subheadings and larger text.
+ *
+ * @type {number}
+ * @default 18px
+ */
 $font-size-xl: 18px;
+
+/**
+ * The medium font size used for body text and smaller headings.
+ *
+ * @type {number}
+ * @default 16px
+ */
 $font-size-lg: 16px;
+
+/**
+ * The base font size used for the default text size.
+ *
+ * @type {number}
+ * @default 15px
+ */
 $font-size-base: 15px;
+
+/**
+ * The medium font size used for smaller text and labels.
+ *
+ * @type {number}
+ * @default 14px
+ */
 $font-size-md: 14px;
+
+/**
+ * The small font size used for even smaller text and captions.
+ *
+ * @type {number}
+ * @default 12px
+ */
 $font-size-sm: 12px;
+
+/**
+ * The extra-small font size used for the smallest text and icons.
+ *
+ * @type {number}
+ * @default 10px
+ */
 $font-size-xs: 10px;
