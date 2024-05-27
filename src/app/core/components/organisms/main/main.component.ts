@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '@data-home/services/products.service';
 import { ProductEntity } from '@domain-home/entities/product.entity';
-import { ProductCardComponent } from '@components/components';
+import { ProductCardComponent, CarouselComponent } from '@components/components';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [ProductCardComponent],
+  imports: [ProductCardComponent, CarouselComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
   providers: [ProductsService],
