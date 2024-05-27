@@ -12,14 +12,12 @@ import { ProductCardComponent } from '@components/components';
   providers: [ProductsService],
 })
 export class MainComponent implements OnInit {
-
-  constructor(public productService: ProductsService) { }
+  constructor(public productService: ProductsService) {}
   dataProducts: ProductEntity[] | any[] | null = {} as ProductEntity[];
   selectedProduct: ProductEntity | null = null;
 
   ngOnInit(): void {
     this.loadProducts();
-
   }
 
   loadProducts(): void {
@@ -28,21 +26,20 @@ export class MainComponent implements OnInit {
         this.dataProducts = products;
       },
     });
-    this.productService.getAll()
-      .subscribe({
-        next: (responseData) => {
-          this.dataProducts = responseData;
-        },
-        error: (error) => {
-          console.error('Error fetching data:', error);
-        },
-        complete: () => {
-          console.log('HTTP request complete');
-        }
-      });
+    this.productService.getAll().subscribe({
+      next: (responseData) => {
+        this.dataProducts = responseData;
+      },
+      error: (error) => {
+        console.error('Error fetching data:', error);
+      },
+      complete: () => {
+        console.log('HTTP request complete');
+      },
+    });
   }
 
-  onSubmit() { }
+  onSubmit() {}
 
   onProductSelect(product: ProductEntity, isChecked: boolean) {
     if (isChecked) {
