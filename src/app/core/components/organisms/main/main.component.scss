@@ -2,8 +2,11 @@
 
 main {
   margin-top: 74px;
+  background: url("../../../../../../public/images/background-1@2x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
   .goal-content {
-    padding: 2rem;
     text-align: center;
 
     h2 {
@@ -12,42 +15,102 @@ main {
     }
 
     .goal-card {
-      background-color: red;
-      // background-color: $card-background-color;
-      border: 1px solid green;
-      // border: 1px solid $border-color;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 6px #00000029;
+      border-radius: 5px;
+      color: #363636;
       padding: 1rem;
       margin: 0 auto;
-      max-width: 400px;
+      max-width: 420px;
+      text-align: start;
+
+      .subtitle-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
       h3 {
         font-family: $font-family-secondary;
         color: $secondary-color;
       }
+      a {
+        text-decoration: underline;
+        font: normal normal 600 15px/17px Montserrat;
+        color: $primary-color;
+      }
 
       p {
         margin: 0.5rem 0;
+      }
+      .sub-box {
+        display: flex;
+        justify-content: space-between;
+        .column{
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+
+      .row.box {
+
+        border-radius: 4px;
+        padding: 0px 5px;
+
+      }
+      .row.box.blue {
+        background: #a5d7e1 0% 0% no-repeat padding-box;
+
+      }
+      .row.box.yellow {
+        background: #FECD72 0% 0% no-repeat padding-box;
+      }
+      .row.box.green {
+        background: #95DBB7 0% 0% no-repeat padding-box;
+        padding: 0px 45px;
+      }
+
+      #icon-mountain {
+        background: url("../../../../../../public/images/icon-goal-mountain@2x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        margin-left: 315px;
       }
     }
   }
 
   .goal-products {
-    padding: 2rem;
+    padding: 3rem;
+    text-align: center;
 
+    h3 {
+      font: normal normal normal 16px/24px Verdana;
+      color: #3f3f3f;
+      padding: 0rem 18rem;
+    }
+
+    .bold {
+      color: #000;
+      font: normal normal bold 16px/24px Verdana;
+    }
     .highlight {
-      color: $secondary-color;
+      color: #fe9200;
     }
 
     .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: space-around;
 
       .product-card {
-        width: 30%;
+        // width: 40%;
         padding: 0.5rem;
         background-color: $background-primary-color;
-        margin-bottom: 1rem;
+        margin: 1rem;
         box-shadow: 0px 0px 6px #00000029;
         -webkit-box-shadow: 0px 0px 6px #00000029;
         -moz-box-shadow: 0px 0px 6px #00000029;
@@ -81,17 +144,18 @@ main {
     padding: 2rem;
 
     .btn-primary {
-      background-color: $primary-color;
-      color: #fff;
+      color: #3f3f3f;
       padding: 1rem 2rem;
       border: none;
       cursor: pointer;
       font-family: $font-family-primary;
       font-size: 1rem;
+      background: #e2e2e2 0% 0% no-repeat padding-box;
+      border-radius: 25px;
 
       &:hover {
-        background-color: darken(red, 10%);
-        // background-color: darken($primary-color, 10%);
+        color: #fff;
+        background-color: $primary-color;
       }
     }
   }

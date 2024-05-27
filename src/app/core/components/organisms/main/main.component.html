@@ -1,33 +1,57 @@
-<main style="background-color: blue">
-  <div style="padding-left: 5%">
-    <a href="#" style="color: #fff">
+<main id="main">
+  <div style="padding-left: 7%">
+    <a href="#" style="color: #888">
       <img src="icons/home-skandia.svg" alt="Inicio Skandia" />
       Ir a inicio
     </a>
   </div>
-  <div class="goal-content" style="background-color: aquamarine">
-    <h2>¡Tu objetivo ha sido agregado exitosamente!</h2>
-    <h3>¡Te hemos enviado un correo con la notificación!</h3>
+  <div class="goal-content">
+    <h2 style="color: #888">¡Tu objetivo ha sido agregado exitosamente!</h2>
+    <h3 style="color: #888">
+      ¡Te hemos enviado un correo con la notificación!
+    </h3>
     <div class="goal-card">
-      <h3>Conocer mi sobrino</h3>
-      <p>Camper Heisman</p>
-      <p>Meta de ahorro: $6,000,000</p>
-      <p>Fecha de cumplimiento: Diciembre/2022</p>
+      <div class="subtitle-card">
+        <h3>Conocer mi sobrino</h3>
+        <a href="#">Revisar objetivo</a>
+      </div>
+      <p>Categoría: Bienestar</p>
+      <div class="sub-box">
+        <div class="column">
+          <div class="row">En esta fecha:</div>
+          <div class="row box blue">Diciembre/2022</div>
+        </div>
+        <div class="column">
+          <div class="row">Lograrás:</div>
+          <div class="row box yellow">$6.000.000</div>
+        </div>
+        <div class="column">
+          <div class="row">Ya cuentas con:</div>
+          <div class="row box green">$0</div>
+        </div>
+      </div>
+      <br>
+      <a href="#"><img src="icons/check-circle-green.svg" alt=""> &nbsp;!Asocia productos para monitorear su progreso!</a>
+      <div id="icon-mountain"></div>
     </div>
   </div>
   <div class="goal-products">
     <h2>
-      ¡Vamos por esos <span class="highlight">$6,000,000</span> para Conocer mi
-      sobrino!
+      ¡Vamos por esos <span class="highlight">$6,000,000</span> para
+      <span class="highlight">Conocer mi sobrino!</span>
     </h2>
-   
+    <h3>
+      ¡A través de tus productos y nuestros rendimientos podremos lograrlo!
+    </h3>
+    <h3 class="bold">
+      Asocia tus productos o adquiere uno nuevo. <img src="icons/faq-green-square.svg" alt="faq">
+    </h3>
+
     <div class="product-list">
-      @for (
-        product of dataProducts;
-        track product.number;
-        let idx = $index, e = $even
-      ) {
-        <app-product-card
+      <app-carousel>
+        @for ( product of dataProducts; track product.number; let idx = $index,
+        e = $even ) {
+        <product-card
           class="product-card"
           [product]="product"
           [class.selectedCard]="selectedProduct === product"
@@ -35,7 +59,9 @@
           (checkboxChange)="onProductSelect(product, $event)"
           (click)="onProductSelect(product, true)"
         />
-      }
+
+        }
+      </app-carousel>
     </div>
   </div>
   <div class="goal-footer">
