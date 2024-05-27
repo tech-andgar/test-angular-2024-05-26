@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-angular-skandia": {
+    "test-angular-2024-05-26": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-angular-skandia",
+            "outputPath": "dist/test-angular-2024-05-26",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "test-angular-skandia:build:production"
+              "buildTarget": "test-angular-2024-05-26:build:production"
             },
             "development": {
-              "buildTarget": "test-angular-skandia:build:development"
+              "buildTarget": "test-angular-2024-05-26:build:development"
             }
           },
           "defaultConfiguration": "development"

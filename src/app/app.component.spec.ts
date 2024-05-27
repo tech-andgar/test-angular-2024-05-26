@@ -14,10 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'test-angular-skandia' title`, () => {
+  it(`should have the 'test-angular-2024-05-26' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('test-angular-skandia');
+    expect(app.title).toEqual('test-angular-2024-05-26');
   });
 
   it('should render title', () => {
@@ -25,7 +25,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Hello, test-angular-skandia',
+      'Hello, test-angular-2024-05-26',
     );
   });
 });

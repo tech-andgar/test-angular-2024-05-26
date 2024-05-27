@@ -10,5 +10,5 @@ import { HomeComponent } from '@presentation-home/pages/pages';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'test-angular-skandia';
+  title = 'test-angular-2024-05-26';
 }
