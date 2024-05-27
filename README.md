@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description
 
-TestAngularABC is a simple web application developed as a technical test using Angular, HTML, JavaScript, TypeScript, and CSS.
+TestAngular20240526 is a simple web application developed as a technical test using Angular, HTML, JavaScript, TypeScript, and CSS.
 
 ## Features
 
@@ -84,9 +84,7 @@ To deploy this application to a production environment, follow the build instruc
 
 ## Screenshots
 
-![Home Page](screenshots/home.png)
-
-![Component Example](screenshots/component.png)
+![Home Page](docs/assets/capture-skandia.gif)
 
 ## Roadmap
 
