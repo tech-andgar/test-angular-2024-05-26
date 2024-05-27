@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '@app/features/home/data/services/products.service';
-import { ProductEntity } from '@app/features/home/domain/entities/product.entity';
-import { ProductCardComponent } from '@app/features/home/presentation/components/components';
+import { ProductsService } from '@data-home/services/products.service';
+import { ProductEntity } from '@domain-home/entities/product.entity';
+import { ProductCardComponent } from '@components/components';
 
 @Component({
   selector: 'app-main',
@@ -12,12 +12,14 @@ import { ProductCardComponent } from '@app/features/home/presentation/components
   providers: [ProductsService],
 })
 export class MainComponent implements OnInit {
+
   constructor(public productService: ProductsService) { }
   dataProducts: ProductEntity[] | any[] | null = {} as ProductEntity[];
   selectedProduct: ProductEntity | null = null;
 
   ngOnInit(): void {
     this.loadProducts();
+
   }
 
   loadProducts(): void {
